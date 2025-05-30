@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Presentation.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class InitClean : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -51,6 +51,7 @@ namespace Presentation.Migrations
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     EventId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PackageId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TicketQuantity = table.Column<int>(type: "int", nullable: false),
                     BookingDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BookingOwnerId = table.Column<string>(type: "nvarchar(450)", nullable: true)

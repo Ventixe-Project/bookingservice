@@ -59,6 +59,10 @@ namespace Presentation.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PackageId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("TicketQuantity")
                         .HasColumnType("int");
 

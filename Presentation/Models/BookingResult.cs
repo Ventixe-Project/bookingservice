@@ -4,6 +4,7 @@
     {
         public bool Success { get; set; }
         public string? Error { get; set; }
+        public string? BookingId { get; set; }
     }
 
     public class BookingResult<T> : BookingResult

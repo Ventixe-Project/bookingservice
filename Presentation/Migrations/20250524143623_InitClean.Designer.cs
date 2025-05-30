@@ -12,8 +12,8 @@ using Presentation.Data.Contexts;
 namespace Presentation.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250519233713_init")]
-    partial class init
+    [Migration("20250524143623_InitClean")]
+    partial class InitClean
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -59,6 +59,10 @@ namespace Presentation.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("EventId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PackageId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

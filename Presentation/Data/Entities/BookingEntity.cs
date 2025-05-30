@@ -6,6 +6,7 @@ namespace Presentation.Data.Entities
     {
         public string Id { get; set; } = Guid.NewGuid().ToString();
         public string EventId { get; set; } = null!;
+        public string PackageId { get; set; } = null!;
         public int TicketQuantity { get; set; } = 1;
         public DateTime BookingDate { get; set; }
 
